@@ -1,5 +1,5 @@
 class Student{
-    constructor(roll_no,name,address,mobile){
+    constructor(name,address,mobile,roll_no){
     this.roll_no=roll_no;
     this.name=name;
     this.address=address;
@@ -36,3 +36,17 @@ var s1 =new  Student(1,"Shohrab Rustam ", "Bangalure ", 7417200362)
 console.log(s1);
 
 Student.task();
+
+class Teacher extends Student{
+constructor(name,address,mobile,Subject, langage){
+    super(name,address,mobile);
+    this.Subject=Subject;
+    this.langage=langage;
+}
+z
+}
+
+
+t1 = new Teacher("Rustam","Bangalure", 7669001123,"Math", "English");
+
+document.write(t1.name);
