@@ -25,9 +25,14 @@ class Student{
         return "Roll No : " +this.roll_no + " Name : " + this.name + " Address : "+ this.address +  " Mobile Number : "+ this.mobile;
     }
 
+    static task(){
+        document.write(" This is the static function ");
+    }
 
 }
 
 var s1 =new  Student(1,"Shohrab Rustam ", "Bangalure ", 7417200362)
 
 console.log(s1);
+
+Student.task();
