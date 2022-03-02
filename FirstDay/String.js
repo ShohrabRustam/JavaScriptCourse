@@ -16,8 +16,19 @@ document.write(array);
 document.write('<br>');
 
 array2 = ["Apple", "Banana","Orange","Mango"];
+array2.push("Date");
+document.write("<h2>Array data !</h2>");
+
 
 array.forEach(element => {
+
+    document.write("<h1>"+element+"<h1/>");
+});
+
+document.write("<h2>Array2 data !</h2>");
+
+
+array2.forEach(element => {
 
     document.write("<h1>"+element+"<h1/>");
 });
