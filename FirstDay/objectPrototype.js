@@ -28,3 +28,5 @@ xyz.prototype.getAddress = function(){
 xyz.prototype.getSubject = function (){
     return this.Subject;
 }
+
+xyz.prototype.grades="A";
