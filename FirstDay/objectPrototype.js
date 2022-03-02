@@ -16,3 +16,15 @@ var xyz = function(Name, Subject , Address ){
 
 let x = new xyz("Rustam", "Problem Solving","New Delhi");
 console.log(x);
+
+xyz.prototype.getName = function(){
+    return this.Name;
+}
+
+xyz.prototype.getAddress = function(){
+    return this.Address;
+}
+
+xyz.prototype.getSubject = function (){
+    return this.Subject;
+}
