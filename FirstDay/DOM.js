@@ -14,6 +14,7 @@ for(let i=0;i<x.length;i++){
     x[i].style.border="2px solid black";
     x[i].style.margin="5px";
 }
+
 var y = document.getElementsByClassName('demo');
 
 for(let i=0;i<y.length;i++){
