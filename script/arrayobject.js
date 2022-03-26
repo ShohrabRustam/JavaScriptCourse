@@ -15,3 +15,4 @@ let students = [
     });
 
     console.log(student);
+    
