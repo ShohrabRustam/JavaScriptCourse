@@ -7,6 +7,7 @@ const gameArea = document.querySelector('.gameArea')
 // console.log(score);
 // console.log(startScreen)
 // console.log(gameArea)
+let keys = {ArrowUp:false , ArrowDown:false , ArrowRight:false, ArrowLeft:false};
 
 startScreen.addEventListener('click',start);
 
@@ -15,11 +16,13 @@ document.addEventListener('keyup',pressOff);
  
 function pressOn(e){
     e.preventDefault();
-    console.log("On",e.key);
+    keys[e.key]=true;
+    console.log(keys);
 }
 
 function pressOff(e){
-    console.log("Off",e.key);
+    keys[e.key]=false;
+    console.log(keys);
 }
 
 function start(){
