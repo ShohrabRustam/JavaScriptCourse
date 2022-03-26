@@ -3,4 +3,13 @@ const score = document.querySelector('.score');
 const startScreen = document.querySelector('.startScreen');
 
 const gameArea = document.querySelector('.gameArea')
-alert("Connected !!")
+
+// console.log(score);
+// console.log(startScreen)
+// console.log(gameArea)
+
+startScreen.addEventListener('click',start);
+
+function start(){
+    alert("connected!!")
+}
