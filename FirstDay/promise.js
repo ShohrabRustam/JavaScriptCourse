@@ -17,7 +17,6 @@ promise.then(function(resolve){
     console.log(reject + " The user do not know how to drive ");
 });
 
-
 //Under-Standing of the Promises 
 
  var functions= function (){
