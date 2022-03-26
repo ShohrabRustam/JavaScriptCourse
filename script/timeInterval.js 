@@ -1,8 +1,0 @@
-console.log("Start Program);
-
-let i=0;
-setInterval(()=>{
-    document.getElementById('name').innerText = ++i;
-},5000);
-
-console.log("End Program");
