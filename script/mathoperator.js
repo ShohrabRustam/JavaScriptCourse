@@ -3,3 +3,5 @@ let number2 = 200;
 
 console.log("Addition ", number1+number2);
 console.log("subtraction ", number1-number2);
+// powwe or exponent 
+console.log("exponent",number1**number2);
