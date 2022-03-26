@@ -8,3 +8,8 @@ element.onclick= function(){
 function myFunction(){
     alert("you Clicked Me!!! ");
 }
+
+function doubleClickedMe()
+{
+    alert("You Clicked me Two Time");
+}
