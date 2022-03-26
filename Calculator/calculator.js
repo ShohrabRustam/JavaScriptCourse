@@ -1,6 +1,17 @@
-let button = document.querySelector('button');
+const button = document.querySelector('button');
+
+const output = document.querySelector('.output');
+
+
+
 // alert(button);
 
 button.addEventListener('click',function(){
-    alert("Click !!!!");
+    const cost = document.querySelector('input');
+    console.log(cost.value*0.15);
+    let tip = (cost.value*0.15).toFixed(2);
+    let temp = "<h1>You should tip $"+tip+"on $"+cost+"</h1>";
+    // alert("Click !!!!");
+    output.innerHTML = temp;
+
 });
