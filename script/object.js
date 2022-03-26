@@ -17,7 +17,6 @@ let person = {
 delete obj.keyname1;
 
 // constant object in js 
-
 const employee = {
     name:'Shohrab Rustam',
     company:'Mpokket',
