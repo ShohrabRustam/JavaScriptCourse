@@ -9,49 +9,68 @@ const gameArea = document.querySelector('.gameArea')
 // console.log(gameArea)
 
 //setup object to track key which key is pressed 
-let keys = {ArrowUp:false , ArrowDown:false , ArrowRight:false, ArrowLeft:false};
+let keys = { ArrowUp: false, ArrowDown: false, ArrowRight: false, ArrowLeft: false };
 
-let player = {};
+let player = { speed: 5 };
 
-startScreen.addEventListener('click',start);
+startScreen.addEventListener('click', start);
 
-document.addEventListener('keydown',pressOn);
-document.addEventListener('keyup',pressOff);
+document.addEventListener('keydown', pressOn);
+document.addEventListener('keyup', pressOff);
 
 //animation 
-function playGame(){
+function playGame() {
     // startScreen.classList.remove('hide');
     // gameArea.classList.add('hide')
-    console.log('inPlay');
-    if(player.strat){
-    window.requestAnimationFrame(playGame);
+    // console.log('inPlay');
+    let car = document.querySelector('.car');
+    if (player.start) {
+        if (keys.ArrowUp) {
+            player.y -= player.speed;
+        }
+        if (keys.ArrowDown) {
+            player.y += player.speed;
+        }
+        if (keys.ArrowLeft) {
+            player.x -= player.speed;
+        }
+        if (keys.ArrowRight) {
+            player.x += player.speed;
+        }
+
+        car.style.left = player.x + 'px';
+        car.style.top = player.y + 'px';
+        window.requestAnimationFrame(playGame);
     }
 }
 
 
-function pressOn(e){
+function pressOn(e) {
     e.preventDefault();
-    keys[e.key]=true;
+    keys[e.key] = true;
     console.log(keys);
 }
 
-function pressOff(e){
+function pressOff(e) {
     // what key was press
     e.preventDefault();
-    keys[e.key]=false;
+    keys[e.key] = false;
     console.log(keys);
 }
 
-function start(){
+function start() {
     // alert('connected');
 
     startScreen.classList.add('hide');
     gameArea.classList.remove('hide');
-    player.start=true;
+    player.start = true;
     // console.log('click')
     window.requestAnimationFrame(playGame);
     let car = document.createElement("div");
     car.innerText = "Car";
-    car.setAttribute('class','car');
+    car.setAttribute('class', 'car');
     gameArea.appendChild(car);
+    player.x = car.offsetLeft;
+    player.y = car.offsetTop;
+    console.log(player)
 }
