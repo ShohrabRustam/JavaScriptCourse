@@ -20,8 +20,8 @@ document.addEventListener('keyup',pressOff);
 
 //animation 
 function playGame(){
-    startScreen.classList.remove('hide');
-    gameArea.classList.add('hide')
+    // startScreen.classList.remove('hide');
+    // gameArea.classList.add('hide')
     console.log('inPlay');
     if(player.strat){
     window.requestAnimationFrame(playGame);
@@ -48,7 +48,7 @@ function start(){
     startScreen.classList.add('hide');
     gameArea.classList.remove('hide');
     player.start=true;
-    console.log('click')
+    // console.log('click')
     window.requestAnimationFrame(playGame);
     let car = document.createElement("div");
     car.innerText = "Car";
