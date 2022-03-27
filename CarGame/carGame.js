@@ -21,7 +21,7 @@ document.addEventListener('keyup',pressOff);
 //animation 
 function playGame(){
     startScreen.classList.remove('hide');
-    // gameArea.classList.add('hide')
+    gameArea.classList.add('hide')
     console.log('inPlay');
     if(player.strat){
     window.requestAnimationFrame(playGame);
@@ -44,6 +44,9 @@ function pressOff(e){
 
 function start(){
     // alert('connected');
+
+    startScreen.classList.add('hide');
+    gameArea.classList.remove('hide');
     player.start=true;
     console.log('click')
     window.requestAnimationFrame(playGame);
