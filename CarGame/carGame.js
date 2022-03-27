@@ -24,6 +24,7 @@ function playGame() {
     // gameArea.classList.add('hide')
     // console.log('inPlay');
     let car = document.querySelector('.car');
+    let road = gameArea.getBoundingClientRect();
     if (player.start) {
         if (keys.ArrowUp) {
             player.y -= player.speed;
@@ -31,7 +32,7 @@ function playGame() {
         if (keys.ArrowDown) {
             player.y += player.speed;
         }
-        if (keys.ArrowLeft) {
+        if (keys.ArrowLeft && player.x>0) {
             player.x -= player.speed;
         }
         if (keys.ArrowRight) {
